@@ -29,8 +29,8 @@ best = 0
 # Obtain train and test values (put here for when you no longer are training the model)
 x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(x,y,test_size = 0.1)
 
-# Train 30 times
-for a in range(30):
+# Train 50 times
+for a in range(50):
     # Train the model using 90% of the given values, and save 10% to test with
     x_train, x_test, y_train, y_test = sklearn.model_selection.train_test_split(x,y,test_size = 0.1)
     
@@ -70,6 +70,7 @@ for x in range(len(predictions)):
     print ("inputs: ", x_test[x])
     print ("actual value: ", y_test[x])
 
+# Output a comparison of the Final Grade vs the requested parameter
 p = "G1"
 style.use("ggplot")
 pyplot.scatter(data[p], data[predict])
